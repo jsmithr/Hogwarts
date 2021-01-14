@@ -1,0 +1,28 @@
+<h2>Agregar estudiante</h2>
+<form [formGroup]="formEstudiante">
+    <div>
+        <label for="name" class="">Nombre</label>
+        <input matInput placeholder="Nombre del estudiante" formControlName="name" id="name">
+    </div>
+    <br />
+    <div>
+        <label>Patronus</label>
+        <input matInput placeholder="Patronus del estudiante" formControlName="patronus" maxlength="20">
+        <mat-hint align="end">{{formEstudiante.get('patronus').value?.length || 0}}/20</mat-hint>
+    </div>
+    <br />
+    <div>
+        <label>Fecha de nacimiento</label>
+        <input matInput type="date" placeholder="Fecha de nacimiento del estudiante" formControlName="dateOfBirth" maxlength="20">
+    </div>
+    <br />
+    <div style="position: relative;">
+        <button mat-stroked-button color="primary">Seleccionar imagen</button>
+        <label class="input-file">
+            <input #file type="file" accept='image/*' (change)="preview(file.files)" [hidden]="true" />
+        </label>
+    </div>
+    <br />
+    <br />
+    <button mat-raised-button color="primary" type="submit" [disabled]="formEstudiante.get('patronus').value == '' || formEstudiante.get('dateOfBirth').value == '' || formEstudiante.get('name').value == '' || formEstudiante.get('image').value == ''" [mat-dialog-close]="formEstudiante.value | json">Agregar solicitud</button>
+</form>

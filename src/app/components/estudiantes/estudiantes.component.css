@@ -1,0 +1,39 @@
+.img-avatar {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.drawer-container {
+    height: 80vh;
+}
+
+.table-data{
+    width: 100%;
+}
+
+.container {
+    padding: 10px;
+}
+
+.input-file {
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+.btn-add {
+    float: right;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
