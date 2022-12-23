@@ -1,2 +1,2 @@
 # Hogwarts
-Desafio frontend prueba técnica
+Angular project to view Hogwarts images 
